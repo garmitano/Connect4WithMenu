@@ -5,6 +5,7 @@ import connect4.models.Board;
 import connect4.models.Message;
 import connect4.models.Turn;
 import connect4.views.BoardView;
+import connect4.views.Connect4GameModeMenu;
 import connect4.views.MessageView;
 import connect4.views.TurnView;
 
@@ -20,18 +21,16 @@ public class Connect4 {
         this.boardView = new BoardView(this.board);
         this.turn = new Turn(this.board);
         this.turnView = new TurnView(this.turn);
-
     }
 
     private void run() {
         do {
+            new Connect4GameModeMenu(this.turn).interact();
             this.playGame();
         } while (this.isResumed());
     }
 
     private void playGame() {
-
-        this.turnView.initPlayers();
         MessageView.getInstance().writeln(Message.GAME_TITLE);
         this.boardView.paintBoard();
 
