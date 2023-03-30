@@ -5,7 +5,7 @@ import java.util.List;
 
 import connect4.utils.Console;
 
-abstract class Menu {
+public abstract class Menu {
 
     private String title;
     private List<Option> options;

@@ -5,9 +5,9 @@ import connect4.models.Board;
 import connect4.models.Message;
 import connect4.models.Turn;
 import connect4.views.BoardView;
-import connect4.views.Connect4GameModeMenu;
 import connect4.views.MessageView;
 import connect4.views.TurnView;
+import connect4.views.menu.GameModeMenu;
 
 public class Connect4 {
 
@@ -25,7 +25,7 @@ public class Connect4 {
 
     private void run() {
         do {
-            new Connect4GameModeMenu(this.turn).interact();
+            new GameModeMenu(this.turn).interact();
             this.playGame();
         } while (this.isResumed());
     }
