@@ -2,6 +2,7 @@ package connect4.views.menu;
 
 import connect4.models.Color;
 import connect4.utils.menu.Menu;
+import connect4.views.Message;
 
 public class SubMenuModoPc extends Menu{
 
@@ -9,7 +10,7 @@ public class SubMenuModoPc extends Menu{
     private Color color;
     
     public SubMenuModoPc(Color color, PlayersManager playersManager){
-        super("Tipo de modo PC");
+        super(Message.SELECT_PLAYER_TO_COLOR.toString() + color.getString());
         this.playersBuilder = playersManager;
         this.color = color;
     }
@@ -18,5 +19,4 @@ public class SubMenuModoPc extends Menu{
         this.add(new RandomPlayerOption(color, this.playersBuilder));
         this.add(new IAPlayerOption(color, this.playersBuilder));
     }
-    
 }

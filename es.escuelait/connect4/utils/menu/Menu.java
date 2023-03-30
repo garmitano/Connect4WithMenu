@@ -46,7 +46,7 @@ public abstract class Menu {
         int answer;
         boolean ok;
         do {
-            answer = Console.getInstance().readInt("Opción? [1-" + this.options.size() + "]: ") - 1;
+            answer = Console.getInstance().readInt("Option? [1-" + this.options.size() + "]: ") - 1;
             ok = 0 <= answer && answer <= this.options.size() - 1;
             if (!ok) {
                 Console.getInstance().writeln("Error!!!");

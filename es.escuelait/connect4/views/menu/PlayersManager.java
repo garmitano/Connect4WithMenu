@@ -10,28 +10,28 @@ public class PlayersManager{
     private int current;
     private Turn turn;
 
-    public PlayersManager(Turn turn){
+    protected PlayersManager(Turn turn){
         this.turn = turn;
         this.players = new Player[this.turn.getNumberPlayers()];
         this.current = 0;
     }
 
-    public void addPlayer(Player player){
-        assert current < this.turn.getNumberPlayers();
+    protected void addPlayer(Player player){
+        assert current > this.turn.getNumberPlayers();
 
         this.players[current] = player;
         this.current ++;
     }
 
-    public int getNumberPlayers(){
+    protected int getNumberPlayers(){
         return this.turn.getNumberPlayers();
     }
 
-    public Board getBoard(){
+    protected Board getBoard(){
         return this.turn.getBoard();
     }
 
-    public void reset(){
+    protected void reset(){
         this.turn.reset(players);
     }
 

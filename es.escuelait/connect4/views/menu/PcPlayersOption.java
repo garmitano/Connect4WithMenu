@@ -1,7 +1,6 @@
 package connect4.views.menu;
 
 import connect4.models.Color;
-import connect4.models.RandomPlayer;
 import connect4.utils.menu.Option;
 
 class PcPlayersOption extends Option{
@@ -9,7 +8,7 @@ class PcPlayersOption extends Option{
     private PlayersManager playersManager;
 
     public PcPlayersOption(PlayersManager playersManager) {
-        super("DEMO PC");
+        super("Demo PC");
         this.playersManager = playersManager;
     }
 

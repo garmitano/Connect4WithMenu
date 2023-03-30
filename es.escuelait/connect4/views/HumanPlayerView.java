@@ -3,7 +3,6 @@ package connect4.views;
 import connect4.utils.InIntervalDialog;
 import connect4.models.Coordinate;
 import connect4.models.HumanPlayer;
-import connect4.models.Message;
 
 public class HumanPlayerView extends PlayerView {
 

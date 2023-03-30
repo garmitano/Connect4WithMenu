@@ -1,6 +1,5 @@
 package connect4.views;
 
-import connect4.models.Message;
 import connect4.models.Player;
 
 public abstract class PlayerView {
