@@ -1,18 +1,13 @@
-## Getting Started
+## Juego del Conecta 4 con menu de consola
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+![Connect4](/es.escuelait/connect4/doc/img/conncet4.jpeg)
 
-## Folder Structure
+#### Se agregó un menu de consola en la vista, respetando el modelo propuesto por Xavi, Jose y Ponc del laboratorio Turing.
 
-The workspace contains two folders by default, where:
+##### - Se modificó la clase TurnView, presindiendo de PlayerFactory y seleccionando los player desde las opciones del menu.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+##### - Desde la clase PlayerManager se confecciona el arreglo de jugadores seleccionados y se resetea el turno.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Diagrama de clases
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+![ClassDiagram](/es.escuelait/connect4/doc/out/menuDiagram.png)
