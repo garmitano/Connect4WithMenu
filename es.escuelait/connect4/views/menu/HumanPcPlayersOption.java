@@ -15,10 +15,14 @@ class HumanPcPlayersOption extends Option{
 
     @Override
     public void interact() {
-        this.playersManager.addPlayer(new HumanPlayer(Color.get(0), this.playersManager.getBoard()));
 
-        new SubMenuModoPc(this.playersManager).interact();
-
+        for(int i=0; i < this.playersManager.getNumberPlayers(); i++){
+            if(i==0){
+                this.playersManager.addPlayer(new HumanPlayer(Color.get(i), this.playersManager.getBoard()));
+            }else{
+                new SubMenuModoPc(Color.get(i), this.playersManager).interact();
+            }
+        }
         this.playersManager.reset();
     }
 }

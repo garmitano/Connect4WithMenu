@@ -10,7 +10,6 @@ class PcPlayersOption extends Option{
 
     public PcPlayersOption(PlayersManager playersManager) {
         super("DEMO PC");
-
         this.playersManager = playersManager;
     }
 
@@ -18,7 +17,7 @@ class PcPlayersOption extends Option{
     public void interact() {
 
         for(int i=0; i < this.playersManager.getNumberPlayers(); i++){
-            new SubMenuModoPc(this.playersManager).interact();
+            new SubMenuModoPc(Color.get(i), this.playersManager).interact();
         }
         this.playersManager.reset();
 }
